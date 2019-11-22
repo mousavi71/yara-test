@@ -7,7 +7,7 @@ import {RestApiService} from '../rest-api.service';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-  private posts: any;
+  private posts: Array<Post>;
 
   constructor(private apiService: RestApiService) {
   }
@@ -15,12 +15,13 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getPosts().subscribe(data => {
       this.posts = data;
-      console.log(data, 'posts');
     });
   }
+}
 
-// , err => {
-//   window.location.href = 'http://localhost:1880/api/v1/token';
-//   localStorage.clear();
-// }
+export interface Post {
+  body: string;
+  id: number;
+  title: string;
+  userId: string;
 }

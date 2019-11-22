@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
 import { EachPostComponent } from './each-post/each-post.component';
 import {HttpClientModule} from '@angular/common/http';
+import { TitleShortenerPipe } from './title-shortener.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
-    EachPostComponent
+    EachPostComponent,
+    TitleShortenerPipe
   ],
   imports: [
     BrowserModule,

@@ -1,14 +1,5 @@
-//.row {
-//  display: flex;
-//  flex-wrap: wrap;
-//}
-//.side {
-//  flex: 30%;
-//  background-color: #f1f1f1;
-//  padding: 20px;
-//}
 .header {
-  padding: 60px;
+  padding: 1vw;
   text-align: center;
   background: #1abc9c;
   color: white;
@@ -23,29 +14,36 @@
   background-color: #e2e2e1;
   .each-post {
     background-color: #fbfbfb;
-    padding: 0 50px;
-    width: 400px;
-    font-size: 27px;
-    text-align: center;
-    line-height: 100px;
+    padding: 0 20px;
+    width: 40vw;
+    max-width: 400px;
+    text-align: left;
     margin: 15px;
     border-radius: 10px;
     color: #9a9da0;
+    cursor: pointer;
     .post-title {
       white-space: nowrap;
-      //width: 400px;
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: start;
-      //word-break: break-all;
+      margin: 10px 0;
     }
     .post-desc {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: start;
+      margin: 15px 0;
     }
   }
 }
 
 
+@media only screen and (max-width: 600px) {
+  .posts {
+    .each-post {
+      width: 75vw;
+    }
+  }
+}

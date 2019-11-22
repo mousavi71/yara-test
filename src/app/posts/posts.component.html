@@ -1,36 +1,12 @@
-<!--<p>-->
-<!--  posts works!-->
-<!--</p>-->
 <div class="header">
   <h1>Sample Posts</h1>
   <p>
     click on each post to see detail
   </p>
-<!--  <p>With a <b>flexible</b> layout.</p>-->
 </div>
-
-<!--<div class="row">-->
-<!--  <div class="side">-->
-<!--    <h3>More Text</h3>-->
-<!--    <p>Lorem ipsum dolor sit ame.</p>-->
-<!--    <div class="fakeimg" style="height:60px;">Image</div>-->
-<!--    <br>-->
-<!--    <div class="fakeimg" style="height:60px;">Image</div>-->
-<!--    <br>-->
-<!--    <div class="fakeimg" style="height:60px;">Image</div>-->
-<!--  </div>-->
-<!--</div>-->
 <div class="posts">
-  <div *ngFor="let item of posts; index as i;" class="each-post">
-    <div class="post-title">
-
-    </div>
-    <h2 class="post-title">{{item.title}}</h2>
-    <h5 class="post-desc">Title description, Dec 7, 2017</h5>
-  </div>
-  <div class="each-post">
-    <div>
-      hi
-    </div>
+  <div *ngFor="let item of posts" class="each-post" [routerLink]="['/posts', item.id]">
+    <h2 class="post-title">{{item.title | titleShorter}}</h2>
+    <div class="post-desc">{{item.body}}</div>
   </div>
 </div>
